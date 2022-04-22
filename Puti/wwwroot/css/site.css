@@ -1,0 +1,80 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+.header-h1 h1 {
+    position: relative;
+    padding-bottom: .5rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #198754;
+}
+
+    .header-h1 h1::before {
+        content: "";
+        position: absolute;
+        border-bottom: 2px solid #198754;
+        bottom: .25rem;
+        left: 50%;
+        width: 30%;
+        transform: translateX(-50%);
+    }
+
+    .header-h1 h1::after {
+        content: "";
+        position: absolute;
+        border-bottom: 2px solid #198754;
+        bottom: 0;
+        left: 50%;
+        width: 15%;
+        transform: translateX(-50%);
+    }
+.password {
+    position: relative;
+}
+
+.password-control {
+    position: absolute;
+    top: 11px;
+    right: 6px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(https://snipp.ru/demo/495/view.svg) 0 0 no-repeat;
+}
+    .password-control.view1 {
+        background: url(https://snipp.ru/demo/495/no-view.svg) 0 0 no-repeat;
+    }
+
+    .password-control.view {
+        background: url(https://snipp.ru/demo/495/no-view.svg) 0 0 no-repeat;
+    }
+
+.password-control1 {
+    position: absolute;
+    top: 11px;
+    right: 6px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(https://snipp.ru/demo/495/view.svg) 0 0 no-repeat;
+}
+
+.password-control1.view {
+    background: url(https://snipp.ru/demo/495/no-view.svg) 0 0 no-repeat;
+}
