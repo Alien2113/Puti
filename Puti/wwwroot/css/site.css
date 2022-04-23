@@ -78,3 +78,133 @@ body {
 .password-control1.view {
     background: url(https://snipp.ru/demo/495/no-view.svg) 0 0 no-repeat;
 }
+
+.list {
+    margin: 0 -20px 0 0;
+    overflow: hidden;
+}
+
+.list-item {
+    margin: 0 0px 20px 0;
+    border: 2px solid #34c834;
+    padding: 5px 10px;
+}
+
+.checkbox-google {
+    display: inline-block;
+    line-height: 28px;
+    position: relative;
+    vertical-align: super;
+    font-size: 12px;
+}
+
+.checkbox-google .checkbox-google-switch {
+    display: inline-block;
+    width: 36px;
+    height: 14px;
+    border-radius: 20px;
+    position: relative;
+    top: 6px;
+    vertical-align: top;
+    background: #9f9f9f;
+    transition: .2s;
+}
+
+    .checkbox-google .checkbox-google-switch:before {
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: -3px;
+        left: -1px;
+        background: #fff;
+        border-radius: 50%;
+        box-shadow: 0 3px 1px -2px rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12);
+        transition: .15s;
+    }
+
+.checkbox-google input[type=checkbox] {
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+    .checkbox-google input[type=checkbox]:checked + .checkbox-google-switch {
+     background: #a8f79a
+    }
+
+        .checkbox-google input[type=checkbox]:checked + .checkbox-google-switch:before {
+            background: #34c834;
+            transform: translateX(18px);
+        }
+
+.checkbox-google input[type="checkbox"]:not(:disabled) + .checkbox-google-switch {
+    cursor: pointer;
+    border-color: rgba(0, 0, 0, .3);
+}
+
+.checkbox-google input[type="checkbox"]:not(:disabled):active + .checkbox-google-switch:before,
+.checkbox-google input[type="checkbox"]:not(:disabled):focus + .checkbox-google-switch:before {
+    animation: checkbox-active-on 0.5s forwards linear;
+}
+
+@keyframes checkbox-active-on {
+    0% {
+        box-shadow: 0 0 0 0 rgba(212,212,212, 0);
+    }
+
+    99% {
+        box-shadow: 0 0 0 10px rgba(212,212,212, 0.5);
+    }
+}
+
+.checkbox-google input[type="checkbox"]:not(:disabled):checked:active + .checkbox-google-switch:before,
+.checkbox-google input[type="checkbox"]:not(:disabled):checked:focus + .checkbox-google-switch:before {
+    animation: checkbox-active-off 0.5s forwards linear;
+}
+
+@keyframes checkbox-active-off {
+    0% {
+        box-shadow: 0 0 0 0 rgba(154,190,247, 0);
+    }
+
+    99% {
+        box-shadow: 0 0 0 10px rgba(154,190,247, 0.5);
+    }
+}
+
+.checkbox-google input[type=checkbox]:disabled + .checkbox-google-switch {
+    filter: grayscale(60%);
+    border-color: rgba(0, 0, 0, .1);
+}
+
+    .checkbox-google input[type=checkbox]:disabled + .checkbox-google-switch:before {
+        background: #eee;
+    }
+
+.dopp {
+    box-sizing: content-box;
+    padding: unset;
+    margin-top: 5px;
+}
+
+.vkl {
+    object-fit: none;
+    object-position: bottom;
+    aspect-ratio: 1;
+    width: max-content;
+    margin-bottom: 5px;
+}
+
+.brdr {
+    border-bottom: double;
+    inline-size: -webkit-fill-available;
+    text-align: center;
+}
+
+/*“”“ Õ¿◊»Õ¿≈“—ﬂ*/
+

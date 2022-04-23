@@ -1,7 +1,84 @@
-﻿<div id="map" style="width: 800px; height: 600px"></div>
+﻿<div class="container">
+  <div class="row">
+    <div class="col">
+      <div id="map" style="width: 850px; height: 600px"></div>
+    </div>
+    <div class="col" style="">
+        <div class="list">
+	<div class="list-item">
+        <label class="brdr" >Отображение пунктов сбора отходов</label>
+        <div class="container dopp" >
+        <img class="vkl" src="~/image/Trash/trash1.png" alt="Бумага">
+        <img class="vkl" src="~/image/Trash/trash2.png" alt="Стекло">
+        <img class="vkl" src="~/image/Trash/trash3.png" alt="Пластик">
+        <img class="vkl" src="~/image/Trash/trash4.png" alt="Металл">
+        <img class="vkl" src="~/image/Trash/trash5.png" alt="Одежда">
+        <img class="vkl" src="~/image/Trash/trash6.png" alt="Иное">
+        <img class="vkl" src="~/image/Trash/trash7.png" alt="Опасные отходы">
+        <img class="vkl" src="~/image/Trash/trash8.png" alt="Батарейки">
+        <img class="vkl" src="~/image/Trash/trash9.png" alt="Лампочки">
+        <img class="vkl" src="~/image/Trash/trash10.png" alt="Бытовая техника">
+        <img class="vkl" src="~/image/Trash/trash11.png" alt="Тетра Пак">
+        <img class="vkl" src="~/image/Trash/trash12.png" alt="Крышки">
+        <img class="vkl" src="~/image/Trash/trash13.png" alt="Шины">
+        </div>
+        <label class="checkbox-google"> 
+            <input type="checkbox">
+            <span class="checkbox-google-switch"></span>
+        Показать пункты, принимающие всё выбранное в одном месте
+        </label>       
+        </div>
+	    <div class="list-item">
+           <label class="brdr">Изменение пунктов</label>
+        
+           <label class="checkbox-google" style="font-size: 14px">
+	    <input type="checkbox">
+	    <span class="checkbox-google-switch"></span>
+    Добавить новый пункт сбора отходов    
+    </label> 
+    
+           <div class="input-group mb-1">
+        <span class="input-group-text" style="width: 100px; font-size: 14px; height: 30px">Имя</span>
+        <input type="text" style="height: 30px" class="form-control" id="NewNamePoint" aria-describedby="basic-addon3">
+        </div>
+        <div class="input-group mb-1">
+        <span class="input-group-text" style="width: 100px; font-size: 14px; height: 30px">Адрес</span>
+        <input type="text" style="height: 30px" class="form-control" id="NewAdressPoint" aria-describedby="basic-addon3">
+        </div>
+
+
+    <label class="checkbox-google"style="font-size: 14px">
+	    <input type="checkbox">
+	    <span class="checkbox-google-switch"></span>
+    Удалить пункт сбора отходов    
+    </label>
+    <div class="input-group mb-1">
+        <span class="input-group-text" style="width: 100px; font-size: 14px; height: 30px">Адрес</span>
+        <input type="text" style="height: 30px" class="form-control" id="DeleteAdressPoint" aria-describedby="basic-addon3">
+        </div>
+    <label class="checkbox-google"style="font-size: 14px">
+	    <input type="checkbox">
+	    <span class="checkbox-google-switch"></span>
+      Изменить пункт сбора отходов</label> 
+
+      <div class="input-group mb-1">
+        <span class="input-group-text" style="width: 100px; font-size: 14px; height: 30px">Имя</span>
+        <input type="text" style="height: 30px" class="form-control" id="NamePoint" aria-describedby="basic-addon3">
+        </div>
+
+
+    </div>
+      </div>
+      
+    </div>
+
+
+  </div>
+ </div>
 
 <script src="https://api-maps.yandex.ru/2.1/?apikey=91e2bfa0-83c9-40ea-8f88-8ccda16939a1&lang=ru_RU"
   type="text/javascript">
-  </script>
+</script>
 
  <script src="/js/map.js"></script>
+  <script src="/js/site.js"></script>
