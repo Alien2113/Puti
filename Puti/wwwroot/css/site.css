@@ -90,6 +90,26 @@ body {
     padding: 5px 10px;
 }
 
+.table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+    .table th {
+        text-align: center;
+        border-bottom-color: none;
+        font-weight: bold;
+        padding: 5px;
+        background: #34c8343d;
+        border: 1px solid #34c834;
+        font-size: 14px;
+    }
+
+    .table td {
+        border: 1px solid #34c834;
+        padding: 5px;
+    }
+
 .checkbox-google {
     display: inline-block;
     line-height: 28px;

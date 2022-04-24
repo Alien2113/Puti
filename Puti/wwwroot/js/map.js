@@ -61,3 +61,9 @@
 
    
 });
+
+$('.rtrt').on('click', '.password-control', function () {
+
+    var id = 5;
+
+});

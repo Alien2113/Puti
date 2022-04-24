@@ -1,0 +1,57 @@
+﻿<div class="container">
+  <div class="row">
+    <div class="col">
+      <div id="map" style="width: 850px; height: 600px"></div>
+    </div>
+    <div class="col">
+        <div class="list">
+	<div class="list-item">
+        <label class="brdr mb-2" >Задание параметров имитационной модели</label>
+        <p style="font-size: 14px">1.Объём контейнера</p>
+           <p style="margin-block: unset"><input type="checkbox" name="V1"> Заданное пользователем</p>
+           <p style="margin-block: unset"><input type="checkbox" name="V2"> Случайное</p>
+<label style="font-size: 14px" >2.Скорость заполнения контейнера</label>
+           <p style="margin-block: unset"><input type="checkbox" name="S1"> Равномерное</p>
+           <p style="margin-block: unset"><input type="checkbox" name="S2"> Случайное</p>
+           <p style="margin-block: unset"><input type="checkbox" name="S3"> В зависимости от населения</p>
+<label style="font-size: 14px" >3.Сравнение оптимальности</label>
+
+<label style="font-size: 14px">4.Ручной выбор рейса</label>
+
+</div>
+  </div>
+</div>
+<div class="mb-3"></div>
+<table class="table" style="border: 2px solid #34c834">
+	<thead>
+		<tr>
+			<th>Рейс</th>
+			<th>Тип отходов</th>
+			<th>Пункты</th>
+			<th>Расстояния</th>
+			<th>Цена</th>
+			<th>Объём сбора</th>
+			<th>Итого</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+
+
+
+<script src="https://api-maps.yandex.ru/2.1/?apikey=91e2bfa0-83c9-40ea-8f88-8ccda16939a1&lang=ru_RU"
+  type="text/javascript">
+</script>
+
+ <script src="/js/map.js"></script>
+  <script src="/js/site.js"></script>

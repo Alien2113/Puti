@@ -50,8 +50,8 @@ namespace Puti.Controllers
             }
             var user = JsonConvert.DeserializeObject<User>(body);
             var newUser = UserService.GetByLoginPassword(user.Email, user.Password);
-            HttpContext.Response.Cookies.Append("token", newUser.Token);
-            HttpContext.Response.Cookies.Append("name", newUser.Name);
+            HttpContext.Response.Cookies.Append("token", newUser.Token,new CookieOptions() {Expires = DateTime.MaxValue });
+            HttpContext.Response.Cookies.Append("name", newUser.Name, new CookieOptions() { Expires = DateTime.MaxValue });
         }
 
         public IActionResult Registration()
@@ -75,6 +75,11 @@ namespace Puti.Controllers
         }
 
         public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        public IActionResult SimulationModel()
         {
             return View();
         }
