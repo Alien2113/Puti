@@ -27,10 +27,10 @@ namespace Puti.Controllers
             HttpContext?.Request?.Cookies.TryGetValue("token", out token);
                 if (UserService.GetByToken(token) != null)
                     return WasteService.GetWastePoints();
-                else return null;
-                     
+                else return WasteService.GetWastePoints();//null;
+
             }
-            return null;
+            return  WasteService.GetWastePoints(); //null;
            
         }
 
@@ -75,6 +75,11 @@ namespace Puti.Controllers
         }
 
         public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        public IActionResult ChangingPoints()
         {
             return View();
         }

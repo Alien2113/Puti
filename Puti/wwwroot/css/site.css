@@ -44,6 +44,35 @@ body {
         width: 15%;
         transform: translateX(-50%);
     }
+
+.header-h1dop h1 {
+    position: relative;
+    padding-bottom: .5rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #198754;
+}
+
+    .header-h1dop h1::before {
+        content: "";
+        position: absolute;
+        border-bottom: 2px solid #198754;
+        bottom: .25rem;
+        left: 50%;
+        width: 50%;
+        transform: translateX(-50%);
+    }
+
+    .header-h1dop h1::after {
+        content: "";
+        position: absolute;
+        border-bottom: 2px solid #198754;
+        bottom: 0;
+        left: 50%;
+        width: 30%;
+        transform: translateX(-50%);
+    }
 .password {
     position: relative;
 }
@@ -88,6 +117,30 @@ body {
     margin: 0 0px 20px 0;
     border: 2px solid #34c834;
     padding: 5px 10px;
+}
+
+.tableChangingPoints {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+    .tableChangingPoints th {
+        text-align: center;
+        font-weight: bold;
+        padding: 5px;
+        background: #1987543b;
+        border: 1px solid #198754;
+        font-size: 14px;
+    }
+
+    .tableChangingPoints td {
+        border: 1px solid #198754;
+        padding: 5px;
+    }
+
+inpnew {
+    border: aliceblue;
+    width: auto
 }
 
 .table {
@@ -218,6 +271,14 @@ body {
     aspect-ratio: 1;
     width: max-content;
     margin-bottom: 5px;
+}
+
+.vykl {
+    object-fit: none;
+    aspect-ratio: 1;
+    width: max-content;
+    margin-bottom: 5px;
+    object-position: top;
 }
 
 .brdr {
