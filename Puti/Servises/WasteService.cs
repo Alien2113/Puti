@@ -18,9 +18,27 @@ namespace Puti.Servises
             List<WasteСollectionPoint> points;
             using (ApplicationContext db = new ApplicationContext())
             {
-                points = db.WasteСollectionPoints.Where(x=>Convert.ToDouble(x.Rating)>4).ToList();
+                points = db.WasteСollectionPoints.Where(x => Convert.ToDouble(x.Rating) > 4).ToList();
             }
             return points;
+        }
+
+        public static void Delete_PointsWaste(int[] arr) {
+            using (ApplicationContext db = new ApplicationContext())
+            {
+                var allitems = db.WasteСollectionPoints.Where(x => arr.Contains(x.Id)).ToList();
+                db.RemoveRange(allitems);
+                db.SaveChanges();
+            }
+        }
+
+        public static void Edit_PointsWaste(List<WasteСollectionPoint> arr) {
+
+            using (ApplicationContext db = new ApplicationContext())
+            {               
+                db.UpdateRange(arr);
+                db.SaveChanges();
+            }
         }
     }
 }

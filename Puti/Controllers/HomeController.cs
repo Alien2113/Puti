@@ -31,8 +31,42 @@ namespace Puti.Controllers
 
             }
             return  WasteService.GetWastePoints(); //null;
-           
         }
+        [HttpPost]
+        public async Task DeletePoint() {
+            try
+            {
+                string body = "";
+                using (StreamReader stream = new StreamReader(Request.Body))
+                {
+                    body = await stream.ReadToEndAsync();
+                }
+                var arr = JsonConvert.DeserializeObject<int[]>(body);
+                WasteService.Delete_PointsWaste(arr);
+            } catch(Exception ex)
+            {
+
+            }
+        }
+        [HttpPost]
+        public async Task UpdatePoint()
+        {
+            try
+            {
+                string body = "";
+                using (StreamReader stream = new StreamReader(Request.Body))
+                {
+                    body = await stream.ReadToEndAsync();
+                }
+                var arr = JsonConvert.DeserializeObject<List<WasteСollectionPoint>>(body);
+                WasteService.Edit_PointsWaste(arr);
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
 
         public  IActionResult Login()
         {
@@ -69,9 +103,6 @@ namespace Puti.Controllers
             }
             var user = JsonConvert.DeserializeObject<User>(body);
             UserService.AddUser(user);
-
- 
-
         }
 
         public IActionResult Privacy()
