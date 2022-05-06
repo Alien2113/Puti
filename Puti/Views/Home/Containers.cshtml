@@ -1,0 +1,44 @@
+﻿<div class="header-h1 header-h1dop">
+  <h1>Панель управления имитационным моделированием</h1>
+</div>
+<div class="row justify-content-center align-items-center">
+<nav>
+<ul class="menu-main">
+     <li class="nav-item">
+		<a class="nav-link" asp-controller="Home" asp-action="SimulationModel">Параметры ИМ и карта</a>
+	 </li>
+	  <li class="nav-item">
+	 	<a class="nav-link" asp-controller="Home" asp-action="Parking">Стоянки</a>
+	 </li>
+	 <li class="nav-item">
+		<a class="nav-link" asp-controller="Home" asp-action="Containers">Контейнеры</a>
+	 </li>
+	 <li class="nav-item">
+	 	<a class="nav-link" asp-controller="Home" asp-action="GarbageTruck">Машины</a>
+	 </li>
+	 <li class="nav-item">
+	 	<a class="nav-link" asp-controller="Home" asp-action="Stock">Базы</a>
+	 </li>
+	 <li class="nav-item">
+	 	<a class="nav-link" asp-controller="Home" asp-action="Routes">Рейсы</a>
+	 </li> 
+</ul>
+</nav>
+</div>
+<div  class="titleNameIM mb-3"><span>Контейнеры</span></div>
+
+<table class="tableChangingPoints" style="border: 1px solid #198754">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Адресс</th>
+			<th>Тип отхода</th>
+			<th>Объём</th>
+			<th>Загруженность</th>
+		</tr>
+	</thead>
+	<tbody id="newstrContainers">
+	</tbody>
+</table>
+
+<link rel="stylesheet" href="/css/site.css">

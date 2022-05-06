@@ -1,5 +1,4 @@
 $(function () {
-
     $.ajax({
         async: false,
         type: 'GET',
@@ -7,7 +6,6 @@ $(function () {
         success: function (data) {
             gettableelement(data);
         }
-
     });
 });
 
@@ -24,10 +22,7 @@ function gettableelement(elements) {
     });
 }
 
-
-
 $("#tablesearch").on("input",function () {
-
     var text = $(this).val();
     $('#newstr tr').each(function (index,elem) {
         var adress = $(this).find('input[name=adress]').val();
@@ -38,7 +33,6 @@ $("#tablesearch").on("input",function () {
            elem.setAttribute('hidden','hidden');
         }
     });
-
 });
 
 $("#butn_delete").click(function () {
@@ -107,12 +101,48 @@ $("#butn_edit").click(function () {
         dataType: "json",
         contentType: "application/json; charset=utf-8",
         success: function () {
-            window.location.replace("https://localhost:44300/Home/Login");
+            window.location.reload();
         },
         error: function () {
-            window.location.replace("https://localhost:44300/Home/Login");
+            window.location.reload();
         },
     });
-    window.location.replace("https://localhost:44300/Home/Login");
+    window.location.reload();
+
+});
+
+$("#Add_newPoint").click(function () {
+
+    var form = $('#butn_add');
+    var name = form.find('[name=name]').val();
+    var typewaste = form.find('[name=typewaste]').val();
+    var lat = form.find('[name=lat]').val();
+    var long = form.find('[name=long]').val();
+    var adress = form.find('[name=adress]').val();
+    var rating = form.find('[name=rating]').val();
+
+    var obj = {
+        Name: name,
+        TypeWaste: typewaste,
+        Latitude: parseFloat(lat),
+        Longitude: parseFloat(long),
+        Address: adress,
+        Rating: rating
+    };
+
+    jQuery.ajax({
+        url: "https://localhost:44300/Home/AddWatePoint",
+        type: "POST",
+        data: JSON.stringify(obj),
+        dataType: "json",
+        contentType: "application/json; charset=utf-8",
+        success: function () {
+            window.location.reload();
+        },
+        error: function () {
+            window.location.reload();
+        },
+    });
+    window.location.reload();
 
 });

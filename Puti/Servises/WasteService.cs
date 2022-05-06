@@ -13,6 +13,16 @@ namespace Puti.Servises
             }
             return true;
         }
+
+        public static bool AddPointWaste(WasteСollectionPoint wastePoint)
+        {
+            using (ApplicationContext db = new ApplicationContext())
+            {
+                db.WasteСollectionPoints.Add(wastePoint);
+                db.SaveChanges();
+            }
+            return true;
+        }
         public static List<WasteСollectionPoint> GetWastePoints()
         {
             List<WasteСollectionPoint> points;

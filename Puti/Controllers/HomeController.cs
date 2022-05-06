@@ -105,7 +105,47 @@ namespace Puti.Controllers
             UserService.AddUser(user);
         }
 
+
+        [HttpPost]
+        public async Task AddWatePoint()
+        {
+            string body = "";
+            using (StreamReader stream = new StreamReader(Request.Body))
+            {
+                body = await stream.ReadToEndAsync();
+            }
+            var waste = JsonConvert.DeserializeObject<WasteСollectionPoint>(body);
+            WasteService.AddPointWaste(waste);
+        }
+
         public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        public IActionResult Containers()
+        {
+            return View();
+        }
+
+        public IActionResult GarbageTruck()
+        { 
+            return View(); 
+        }
+
+        
+        public IActionResult Parking()
+        {
+            return View();
+        }
+
+        public IActionResult Stock()
+        {
+            return View();
+        }
+
+        
+        public IActionResult Routes()
         {
             return View();
         }

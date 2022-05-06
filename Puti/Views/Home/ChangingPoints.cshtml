@@ -1,10 +1,10 @@
-﻿<div class="header-h1dop">
+﻿<div class="header-h1 header-h1dop">
   <h1>Панель управления точками сбора отходов</h1>
 </div>
 
 
 <div class="input-group mb-1 d1">
-<input placeholder="Поиск по адресу..." type="search" class="form-control" id="tablesearch">
+<input placeholder="Поиск по адресу..." type="search" class="form-control" id="tablesearch"  ">
   <button style="width: 100px" id="butn_tablesearch" type="submit">
 	  <img src="/image/loupe.png" alt="Поиск" style="width: 25px;">
   </button>
@@ -12,6 +12,7 @@
 </div>
 <div class="d-flex justify-content-between mb-1">
 <button class="btn-outline-success btn" style="width: 100px" id="butn_edit" type="submit">Изменить</button>
+<button type="button" class="btn-outline-success btn" style="width: 300px" data-bs-toggle="modal" data-bs-target="#butn_add">Добавить новый пункт</button>
 <button class="btn-outline-danger btn" style="width: 100px" id="butn_delete" type="submit">Удалить</button>
 </div>
 <table class="tableChangingPoints" style="border: 1px solid #198754">
@@ -30,6 +31,50 @@
 	<tbody id="newstr">
 	</tbody>
 </table>
+
+<!-- Modal -->
+<div class="modal fade" id="butn_add" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content" style="border: 2px solid #198754;">
+      <div class="modal-header header-h1 header-h1dop2">
+        <h1 class="modal-title" id="exampleModalLabel">Добавление нового пунта сбора отходов</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+    
+		<div class="input-group mb-3">
+		  <span class="input-group-text" style="width: 120px">Название</span>
+		  <input type="text" class="form-control" placeholder="Введите название" name="name">
+		 </div>
+		<div class="input-group mb-3">
+		   <span class="input-group-text" style="width: 120px">Тип отходов</span> 
+		  <input type="text" placeholder="1_2_3" class="form-control" name="typewaste">
+		 </div>
+		 <div class="input-group mb-3">
+			  <span class="input-group-text" style="width: 120px">Широта</span> 
+		  <input type="text" value="60" class="form-control" name="lat">
+		 </div>
+		 <div class="input-group mb-3">
+		   <span class="input-group-text" style="width: 120px">Долгота</span> 
+		  <input type="text" value="30" class="form-control" name="long">
+		 </div>
+		 <div class="input-group mb-3">
+		  <span class="input-group-text" style="width: 120px">Адрес</span> 
+		  <input type="text" placeholder="Введите адрес" class="form-control" name="adress">
+		 </div>
+		 <div class="input-group mb-3">
+		  <span class="input-group-text" style="width: 120px">Рейтинг</span> 
+		  <input type="text" value="5" class="form-control" name="rating">
+		 </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Отменить</button>
+        <button type="button" class="btn btn-outline-success" id="Add_newPoint">Добавить</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <link rel="stylesheet" href="/css/site.css">
  <script src="/js/changingpoints.js"></script>
