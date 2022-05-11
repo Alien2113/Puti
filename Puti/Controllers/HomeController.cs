@@ -144,8 +144,12 @@ namespace Puti.Controllers
             return View();
         }
 
-        
         public IActionResult Routes()
+        {
+            return View();
+        }
+
+        public IActionResult ManualInput()
         {
             return View();
         }
